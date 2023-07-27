@@ -6,7 +6,7 @@ __Task: develop an application for registering tasks performed on the project.__
 
 1. Project: three-layer architecture.
 2. Build automation tool: Maven.
-3. Frameworks: Hibernate, Spring Boot, Spring Data JPA, Spring Security.
+3. Frameworks: Hibernate, Spring Boot, Spring Data JPA.
 4. Database: MySQL.
 5. Database Migrations using Liquibase.
 6. Tools: Lombok.
