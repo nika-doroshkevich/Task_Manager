@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-employee_task
+      author: nika_doroshkevich
+      changes:
+        - createTable:
+            tableName: employee_task
+            columns:
+              - column:
+                  name: employee_id
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: task_id
+                  type: int
+                  constraints:
+                    nullable: false
+
+        - addPrimaryKey:
+            columnNames: employee_id, task_id
+            tableName: employee_task
+
+        - addForeignKeyConstraint:
+            baseColumnNames: employee_id
+            baseTableName: employee_task
+            constraintName: employee_task_employee_fk
+            deferrable: false
+            initiallyDeferred: false
+            referencedColumnNames: id
+            referencedTableName: employee
+        - addForeignKeyConstraint:
+            baseColumnNames: task_id
+            baseTableName: employee_task
+            constraintName: employee_task_task_fk
+            deferrable: false
+            initiallyDeferred: false
+            referencedColumnNames: id
+            referencedTableName: task

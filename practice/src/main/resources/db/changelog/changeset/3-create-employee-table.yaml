@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-employee
+      author: nika_doroshkevich
+      changes:
+        - createTable:
+            tableName: employee
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: patronymic
+                  type: varchar(100)
+              - column:
+                  name: post
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
